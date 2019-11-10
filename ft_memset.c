@@ -5,15 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 19:49:46 by milmi             #+#    #+#             */
-/*   Updated: 2019/10/30 21:48:24 by milmi            ###   ########.fr       */
+/*   Created: 2019/11/09 15:06:46 by milmi             #+#    #+#             */
+/*   Updated: 2019/11/09 15:06:54 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *dest, int src, unsigned int n)
+#include "libft.h"
+
+void	*ft_memset(void *dest, int src, size_t n)
 {
-	unsigned	int	j;
-	char			*p;
+	size_t	j;
+	char	*p;
 
 	j = 0;
 	p = (char *)dest;

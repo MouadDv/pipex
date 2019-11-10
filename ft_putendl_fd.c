@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 04:08:04 by milmi             #+#    #+#             */
-/*   Updated: 2019/10/31 03:18:08 by milmi            ###   ########.fr       */
+/*   Created: 2019/11/09 15:07:43 by milmi             #+#    #+#             */
+/*   Updated: 2019/11/09 15:07:46 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putendl_fd(char *str, int fd)
 
 	i = 0;
 	s = (unsigned char *)str;
-	if (str != NULL)
+	if (str != NULL && fd != -1)
 	{
 		while (s[i] != '\0')
 		{

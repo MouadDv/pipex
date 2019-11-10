@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/16 15:46:56 by milmi             #+#    #+#             */
-/*   Updated: 2019/10/30 23:16:56 by milmi            ###   ########.fr       */
+/*   Created: 2019/11/09 15:13:22 by milmi             #+#    #+#             */
+/*   Updated: 2019/11/09 15:13:26 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1 == NULL || set == NULL)
 		return (0);
 	j = 0;
-	while (ft_find(s1[j], set))
-		j++;
-	start = j;
 	while (ft_find(s1[j], set))
 		j++;
 	start = j;
