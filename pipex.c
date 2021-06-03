@@ -6,7 +6,7 @@
 /*   By: milmi <milmi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 00:43:28 by milmi             #+#    #+#             */
-/*   Updated: 2021/06/03 11:32:17 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/03 11:39:21 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void    free_temp(t_temp *temp)
     free(temp->cmdpath);
     free(temp);
 }
+
+
 
 int     check_cmd(char **pathcmd, t_data *data)
 {
