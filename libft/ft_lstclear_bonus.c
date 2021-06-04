@@ -6,7 +6,7 @@
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 15:04:14 by milmi             #+#    #+#             */
-/*   Updated: 2019/11/09 15:04:17 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/04 19:54:20 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *temp;
-	t_list *nx;
+	t_list	*temp;
+	t_list	*nx;
 
 	if (lst && del)
 	{

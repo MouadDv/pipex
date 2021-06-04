@@ -6,7 +6,7 @@
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 15:05:02 by milmi             #+#    #+#             */
-/*   Updated: 2019/11/09 15:05:05 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/04 20:02:40 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (lst && f && del)
 	{
-		if (!(head = malloc(sizeof(t_list))))
-			return (NULL);
+		head = malloc(sizeof(t_list));
 		head->content = f(lst->content);
 		iter = head;
 		temp = lst->next;
 		while (temp != NULL)
 		{
-			if (!(iter->next = malloc(sizeof(t_list))))
+			iter->next = malloc(sizeof(t_list));
+			if (!iter->next)
 			{
 				ft_lstclear(&head, del);
 				return (NULL);

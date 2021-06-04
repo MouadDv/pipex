@@ -6,7 +6,7 @@
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 15:03:37 by milmi             #+#    #+#             */
-/*   Updated: 2019/11/09 15:03:44 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/04 19:53:52 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_mincase(long int min, int count, long int i, char *ret)
 	return (ret);
 }
 
-int		ft_intlen(long int i)
+int	ft_intlen(long int i)
 {
 	int	count;
 
@@ -63,9 +63,8 @@ char	*ft_itoa(int n)
 	i = k;
 	count += ft_intlen(i);
 	i = k;
-	if ((ret = (char *)malloc(count)))
-	{
+	ret = malloc(count);
+	if (ret)
 		return (ft_mincase(min, count, i, ret));
-	}
 	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 15:13:03 by milmi             #+#    #+#             */
-/*   Updated: 2019/11/09 15:13:06 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/04 20:16:59 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_findstr(char *n, char *h, size_t j, size_t len)
+int	ft_findstr(char *n, char *h, size_t j, size_t len)
 {
 	size_t	i;
 

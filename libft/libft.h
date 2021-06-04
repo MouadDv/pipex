@@ -6,7 +6,7 @@
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 00:43:28 by milmi             #+#    #+#             */
-/*   Updated: 2019/11/10 20:57:13 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/04 20:19:46 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -34,7 +34,7 @@ size_t				ft_strlcat(char *dest, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strnstr(const char *haystack,
-		const char *needle, size_t len);
+						const char *needle, size_t len);
 int					ft_strncmp(const char *str1, const char *str2, size_t n);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int c);
@@ -65,6 +65,6 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst,
-		void *(*f)(void *), void (*del)(void *));
+						void *(*f)(void *), void (*del)(void *));
 
 #endif

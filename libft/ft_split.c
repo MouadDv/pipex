@@ -6,16 +6,16 @@
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 15:08:24 by milmi             #+#    #+#             */
-/*   Updated: 2019/11/09 15:08:30 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/04 20:15:05 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_calrows(char const *s, char c)
+int	ft_calrows(char const *s, char c)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -32,7 +32,7 @@ int		ft_calrows(char const *s, char c)
 	return (j);
 }
 
-int		ft_position(char const *str, char c, int *p1, int *p2)
+int	ft_position(char const *str, char c, int *p1, int *p2)
 {
 	while (str[*p1] == c && str[*p1] != '\0')
 		*p1 = *p1 + 1;
@@ -44,8 +44,8 @@ int		ft_position(char const *str, char c, int *p1, int *p2)
 
 void	ft_swapsplit(char const *str, char *dest, int *p1, int *p2)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = *p2 - *p1;
@@ -76,21 +76,21 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	h = 0;
+	h = -1;
 	if (s == NULL)
 		return (0);
-	if ((ret = malloc((ft_calrows(s, c) + 1) * sizeof(char **))) == NULL)
+	ret = malloc((ft_calrows(s, c) + 1) * sizeof(char **));
+	if (ret == NULL)
 		return (0);
-	while (h < ft_calrows(s, c))
+	while (++h < ft_calrows(s, c))
 	{
-		if ((ret[h] = ft_calloc(ft_position(s, c, &i, &j), sizeof(char)))
-				== NULL)
+		ret[h] = ft_calloc(ft_position(s, c, &i, &j), sizeof(char));
+		if (ret[h] == NULL)
 		{
 			ft_freethisshit(ret, h);
 			return (NULL);
 		}
 		ft_swapsplit(s, ret[h], &i, &j);
-		h++;
 	}
 	ret[h] = NULL;
 	return (ret);

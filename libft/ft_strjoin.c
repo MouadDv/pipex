@@ -6,7 +6,7 @@
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 15:08:57 by milmi             #+#    #+#             */
-/*   Updated: 2019/11/09 15:09:00 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/04 20:16:40 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (0);
 	k = ft_strlen(s1);
 	j = ft_strlen(s2);
-	if (!(ret = (char *)ft_calloc(j + k + 1, sizeof(char))))
+	ret = (char *)ft_calloc(j + k + 1, sizeof(char));
+	if (!(ret))
 		return (0);
 	j = 0;
 	k = 0;

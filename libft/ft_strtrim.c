@@ -6,13 +6,13 @@
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 15:13:22 by milmi             #+#    #+#             */
-/*   Updated: 2019/11/09 15:13:26 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/04 20:17:33 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_find(char c, char const *set)
+int	ft_find(char c, char const *set)
 {
 	int	j;
 
@@ -61,7 +61,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (j >= 0 && ft_find(s1[j], set) == 1)
 		j--;
 	ft_norm(start, j, &len);
-	if ((ret = ft_calloc(len, sizeof(char))) == NULL)
+	ret = ft_calloc(len, sizeof(char));
+	if (ret == NULL)
 		return (0);
 	len -= 2;
 	ft_swaptrim(ret, s1, len, j);

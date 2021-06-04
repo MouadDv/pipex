@@ -6,7 +6,7 @@
 /*   By: milmi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 15:06:32 by milmi             #+#    #+#             */
-/*   Updated: 2019/11/09 15:06:35 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/04 20:11:33 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,18 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if ((dest == NULL && src == NULL) || dest == src)
 		return (NULL);
 	if (p > s)
+	{	
 		while (n > 0)
 		{
 			p[n - 1] = s[n - 1];
 			n--;
 		}
+	}
 	else
 	{
-		j = 0;
-		while (j < n)
-		{
+		j = -1;
+		while (++j < n)
 			p[j] = s[j];
-			j++;
-		}
 	}
 	return (dest);
 }
