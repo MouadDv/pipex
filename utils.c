@@ -6,7 +6,7 @@
 /*   By: milmi <milmi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:22:21 by milmi             #+#    #+#             */
-/*   Updated: 2021/06/04 19:47:43 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/05 12:43:48 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	init_data(t_data *data)
 	data->cmd1 = NULL;
 	data->cmd2 = NULL;
 	data->infd = 0;
-	data->infile = 0;
+	data->infile = NULL;
 	data->outfd = 0;
 	data->outfile = NULL;
 	data->path = NULL;

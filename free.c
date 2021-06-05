@@ -6,7 +6,7 @@
 /*   By: milmi <milmi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:20:33 by milmi             #+#    #+#             */
-/*   Updated: 2021/06/04 19:21:49 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/05 12:53:19 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,13 @@ void	free_struct_norm(t_data **data)
 	if ((*data)->cmd2)
 		free((*data)->cmd2);
 	i = 0;
-	while ((*data)->path[i])
+	if ((*data)->absolute1 == 0 || (*data)->absolute2 == 0)
 	{
-		free((*data)->path[i]);
-		i++;
+		while ((*data)->path[i])
+		{
+			free((*data)->path[i]);
+			i++;
+		}
 	}
 	if ((*data)->path)
 		free((*data)->path);

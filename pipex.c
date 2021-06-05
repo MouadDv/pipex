@@ -6,7 +6,7 @@
 /*   By: milmi <milmi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:24:11 by milmi             #+#    #+#             */
-/*   Updated: 2021/06/04 20:37:43 by milmi            ###   ########.fr       */
+/*   Updated: 2021/06/05 13:00:01 by milmi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,8 +106,8 @@ int	parse_data(t_data **data, char **argv, char **envp)
 	free (temp);
 	(*data)->outfile = ft_strdup(argv[4]);
 	pathenv = find_path(envp);
-	if (!pathenv
-		&& (*data)->absolute1 == 0 && (*data)->absolute2 == 0)
+	if (pathenv == NULL
+		&& ((*data)->absolute1 == 0 || (*data)->absolute2 == 0))
 		return (-1);
 	(*data)->path = ft_split(pathenv, ':');
 	free(pathenv);

@@ -6,7 +6,7 @@
 #    By: milmi <milmi@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/30 12:50:51 by milmi             #+#    #+#              #
-#    Updated: 2021/06/04 18:45:04 by milmi            ###   ########.fr        #
+#    Updated: 2021/06/05 12:58:34 by milmi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRCS = pipex.c \
 		free.c \
 		utils.c
 
-FLAGS=  -Wall -Wextra -Werror
+FLAGS= -Wall -Wextra -Werror
 rm = rm -f
 CC = gcc
 
